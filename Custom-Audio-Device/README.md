@@ -208,9 +208,9 @@ The function takes a pointer to the `audio_device_callbacks` struct
 
 ### Configuring the audio device
 
-After setting the audio device, the app calls the `audio_device_get_capture_settings()`
-function, defined by the OpenTok Linux SDK, to adjust configuration settings for the
-audio capturer:
+The OpenToken Linux SDK calls the `get_capture_settings` callback function
+that we added to the `audio_device_callbacks` struct. In this callback, 
+we adjust configuration settings for the audio capturer:
  
 ```
 static otc_bool audio_device_get_capture_settings(const otc_audio_device *audio_device,
@@ -237,6 +237,6 @@ each 10 microseconds (48,000 per second).
 See the [Vonage Video API developer center](https://tokbox.com/developer/)
 for more information on the OpenTok Linux SDK.
 
-See the [Adjusting audio and video -- Linux](https://tokbox.com/developer/guides/audio-video/android)
+See the [Adjusting audio and video -- Linux](https://tokbox.com/developer/guides/audio-video/linux)
 developer for more information on setting custom audio captures and renderers,
 as well as other audio options, using the OpenTok Linux SDK.

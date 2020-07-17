@@ -1,6 +1,6 @@
-# Custom TURN Servers
+# Configurable TURN Servers
 
-The Custom TURN Servers sample application shows how to use your own
+The Configurable TURN Servers sample application shows how to use your own
 TURN servers to route media traffic. See
 [this documentation](https://tokbox.com/developer/guides/configurable-turn-servers/)
 for basic information on using your own TURN servers in an OpenTok application.
@@ -22,7 +22,7 @@ ID and token from a web service that uses one of
 the [Vonage Video API server SDKs](https://tokbox.com/developer/sdks/server/).
 
 This sample app has you specify only one TURN server. However, the
-OpenTok Linux SDK supports the use of multiple custom TURN servers.
+OpenTok Linux SDK supports the use of multiple TURN servers.
 
 This application uses [CMake](https://cmake.org). Before building
 the sample application, install it and these other dependencies:
@@ -70,13 +70,13 @@ Since it's good practice to create a build folder, let's go ahead and create it
 in the project directory:
 
 ```
-$ mkdir Custom-Audio-Device/build
+$ mkdir Configurable-TURN-Servers/build
 ```
 
 Next, create the building bits using `cmake`:
 
 ```
-$ cd Custom-Audio-Device/build
+$ cd Configurable-TURN-Servers/build
 $ CC=clang CXX=clang++ cmake ..
 ```
 
@@ -88,15 +88,15 @@ Use `make` to build the code:
 $ make
 ```
 
-When the `custom_audio_device` binary is built, run it:
+When the `configurable_turn_servers` binary is built, run it:
 
 ```
-$ ./custom_audio_device
+$ ./configurable_turn_servers
 ```
 
 You can use the [OpenTok Playground](https://tokbox.com/developer/tools/playground/)
 to connect to the OpenTok session in a web browser, view the stream published
-by the Custom Audio Device app, and publish a stream that the app can subscribe to.
+by the Custom TURN Servers app, and publish a stream that the app can subscribe to.
 After entering the session ID in the "Join existing session" tab of the first page
 of the Playground, click the "Advanced Firewall Control" link (near the top of
 the page) and enter the information for your custom TURN server. Then click
