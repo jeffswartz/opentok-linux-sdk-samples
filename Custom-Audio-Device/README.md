@@ -196,7 +196,7 @@ array to the audio buffer that will be used for audio in the published stream.
 ### Setting the audio device to be used by the application
 
 Once the application initializes the `struct audio_device` struct and sets the
-pointers to the callback functions the custom audio device can be set by
+pointers to the callback functions, the custom audio device can be set by
 using the `otc_set_audio_device()` function defined in the OpenTok Linux SDK.
 
 ```c
