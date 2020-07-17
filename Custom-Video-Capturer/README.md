@@ -202,7 +202,7 @@ static otk_thread_func_return_type capturer_thread_start_function(void *arg) {
 
 ### Setting the video capturer to be used by the publisher
 
-When the publisher is create, the custom video capturer has been set.
+When the publisher is created, the custom video capturer has been set.
 A pointer to the `otc_video_capturer_callbacks` struct is passed into
 the `otc_publisher_new()` function, which creates the publisher: 
 
