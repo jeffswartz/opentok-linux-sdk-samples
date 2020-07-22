@@ -13,14 +13,6 @@ account to build this app. (Note that OpenTok is now the Vonage Video API.)
 
 ## Building and running the sample app
 
-Edit the [main.cpp](main.cpp) file and add your OpenTok API key,
-an OpenTok session ID, and token for that session. For test purposes,
-you can obtain a session ID and token from the project page in your
-[Vonage Video API](https://tokbox.com/developer/) account. However,
-in a production application, you will need to dynamically obtain the session
-ID and token from a web service that uses one of
-the [Vonage Video API server SDKs](https://tokbox.com/developer/sdks/server/).
-
 This sample app has you specify only one TURN server. However, the
 OpenTok Linux SDK supports the use of multiple TURN servers.
 
@@ -72,6 +64,38 @@ in the project directory:
 ```
 $ mkdir Configurable-TURN-Servers/build
 ```
+
+Copy the [config-sample.h](../common/src/config-sample.h) file as `config.h` at
+`Configurable-TURN-Servers/`:
+
+```
+$ cp common/src/config-sample.h  Configurable-TURN-Servers/
+```
+
+Edit the `config.h` file and add your OpenTok API key,
+an OpenTok session ID, and token for that session. For test purposes,
+you can obtain a session ID and token from the project page in your
+[Vonage Video API](https://tokbox.com/developer/) account. However,
+in a production application, you will need to dynamically obtain the session
+ID and token from a web service that uses one of
+the [Vonage Video API server SDKs](https://tokbox.com/developer/sdks/server/).
+
+Edit the [main.cpp](main.cpp) file and add your OpenTok API key,
+an OpenTok session ID, and token for that session. For test purposes,
+you can obtain a session ID and token from the project page in your
+[Vonage Video API](https://tokbox.com/developer/) account. However,
+in a production application, you will need to dynamically obtain the session
+ID and token from a web service that uses one of
+the [Vonage Video API server SDKs](https://tokbox.com/developer/sdks/server/).
+
+Edit the [main.cpp](main.cpp) file, replacing following with values
+for your TURN server:
+
+* `"<ICE_SERVER_URL>"` -- The URL of the TURN server.
+
+* `"<ICE_SERVER_USER>"` -- The username for the TURN server.
+
+* `"<ICE_SERVER_CREDENTIAL>"` -- The credential string for the TURN server.
 
 Next, create the building bits using `cmake`:
 
@@ -146,14 +170,6 @@ The type `otc_custom_ice_config` struct includes the following members:
 
 * `ice_credential` -- An array of strings specifying credential strings for
   the TURN servers.
-
-Edit the following with values for your TURN server:
-
-* `"<ICE_SERVER_URL>"` -- The URL of the TURN server.
-
-* `"<ICE_SERVER_USER>"` -- The username for the TURN server.
-
-* `"<ICE_SERVER_CREDENTIAL>"` -- The credential string for the TURN server.
 
 The application instantiates an `otc_session_settings` struct,
 defined in the OpenTok Linux SDK:
