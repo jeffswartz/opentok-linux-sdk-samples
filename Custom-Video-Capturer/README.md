@@ -169,11 +169,6 @@ static otc_bool video_capturer_start(const otc_video_capturer *capturer, void *u
 }
 ```
 
-The `capturer_thread_start_function()` function creates a array of 480 16-bit audio samples
-(from a generated waveform) and passes the array to the
-`otc_audio_device_write_capture_data()` function, defined in the OpenTok Linux
-SDK:
-
 The thread start function creates buffer of data for generated video frames.
 The code calls the `otc_video_frame_new()` function, defined by the OpenTok Linux
 SDK, to write an ARGB32 image to the a video frame. Video frames are provided

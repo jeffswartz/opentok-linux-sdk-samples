@@ -80,14 +80,6 @@ in a production application, you will need to dynamically obtain the session
 ID and token from a web service that uses one of
 the [Vonage Video API server SDKs](https://tokbox.com/developer/sdks/server/).
 
-Edit the [main.cpp](main.cpp) file and add your OpenTok API key,
-an OpenTok session ID, and token for that session. For test purposes,
-you can obtain a session ID and token from the project page in your
-[Vonage Video API](https://tokbox.com/developer/) account. However,
-in a production application, you will need to dynamically obtain the session
-ID and token from a web service that uses one of
-the [Vonage Video API server SDKs](https://tokbox.com/developer/sdks/server/).
-
 Edit the [main.cpp](main.cpp) file, replacing following with values
 for your TURN server:
 
